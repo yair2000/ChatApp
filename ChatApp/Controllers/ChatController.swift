@@ -74,8 +74,6 @@ class ChatController: UICollectionViewController, UITextFieldDelegate, UICollect
         // containerView Contraints
         containerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true // CenterX Anchor
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true // CenterY Anchor
-        //containerViewBottomAnchor = containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor) // CenterY Anchor
-        //containerViewBottomAnchor?.isActive = true
         containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
