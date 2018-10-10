@@ -230,6 +230,8 @@ class MessagesController: UITableViewController
         let loginController = LoginController()
         loginController.msgController = self
         present(loginController, animated: true, completion: nil)
-        //FlowController.shared.determineRootViewController()
+        messages.removeAll()
+        messagesDict.removeAll()
+        tableView.reloadData()
     }
 }
