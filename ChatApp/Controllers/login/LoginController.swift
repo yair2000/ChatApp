@@ -23,6 +23,7 @@ class LoginController: UIViewController
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(red: 123/255, green: 15/255, blue: 40/255, alpha: 1)
         button.setTitle("Register", for: .normal)
+	button.layer.cornerRadius = 16
         button.setTitleColor(UIColor.yellow, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(btnHandler), for: .touchUpInside)
