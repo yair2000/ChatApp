@@ -127,7 +127,7 @@ class MessagesController: UITableViewController
         let message = self.messages[indexPath.row]
         
         if let partnerID = message.partnerID(){
-            Database.database().reference().child("User Messages").child(uid).child(partnerID).removeValue { (err, chatRef) in
+            Database.database().reference().child("User Messages").child(uid).child(partnerID).removeValue{ (err, chatRef) in
                 if err != nil{ // If the chat was deleted
                     print("Failed:", err as Any)
                     return
