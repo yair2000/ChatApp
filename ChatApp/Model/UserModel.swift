@@ -6,6 +6,15 @@ import Firebase
 
 struct UserModel
 {
+    private static var currentLoggedMail: String?
+    
+    static func saveCurrentMail(email: String){
+        currentLoggedMail = email
+    }
+    static func currentLogged() ->String{
+        return currentLoggedMail!
+    }
+    
     let id: String
     let name: String?
     let email: String?
