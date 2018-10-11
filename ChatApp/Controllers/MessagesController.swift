@@ -24,6 +24,11 @@ class MessagesController: UITableViewController
         tableView.register(UserCell.self, forCellReuseIdentifier: chatID)
         tableView.allowsMultipleSelectionDuringEditing = true
     }
+    /*
+    override func viewWillAppear(_ animated: Bool) {
+         userStats()
+    }
+    */
     
     var messages = [MessageModel]() // an empty Array of messages
     var messagesDict = [String: MessageModel]()
@@ -151,6 +156,7 @@ class MessagesController: UITableViewController
     
     // Check if the user is online
     func userStats(){
+        //print(Auth.auth().currentUser?.uid)
         if Auth.auth().currentUser?.uid == nil{
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
             handleLogout()
