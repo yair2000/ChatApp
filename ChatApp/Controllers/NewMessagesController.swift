@@ -27,8 +27,9 @@ class NewMessagesController: UITableViewController
         Database.database().reference().child("Users").queryOrdered(byChild: "name").observe(.childAdded, with: { (snapshot) in
             if let dict = snapshot.value as? [String: Any]{
                 let myUser = UserModel(dictionary: dict, id: snapshot.key)
-                self.users.append(myUser)
-                
+                if myUser.email != UserModel.currentLogged(){
+                    self.users.append(myUser)
+                }
                 DispatchQueue.main.async{
                     self.tableView.reloadData()
                 }
