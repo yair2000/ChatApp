@@ -167,6 +167,7 @@ class MessagesController: UITableViewController
         Database.database().reference().child("Users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any]{
                 let user = UserModel(dictionary: dictionary, id: snapshot.key)
+                UserModel.saveCurrentMail(email: dictionary["email"]! as! String)
                 self.imgUsername(user: user)
             }
         }, withCancel: nil)
