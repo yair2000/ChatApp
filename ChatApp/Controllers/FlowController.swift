@@ -13,8 +13,8 @@ class FlowController: NSObject
         
         let didLogin = Auth.auth().currentUser != nil
         let storyboardName = didLogin ? "Main" : "Login"
-        let storyboad = UIStoryboard(name: storyboardName, bundle: .main)
-        let vc = storyboad.instantiateInitialViewController()
+        let storyboard = UIStoryboard(name: storyboardName, bundle: .main)
+        let vc = storyboard.instantiateInitialViewController()
         window?.rootViewController = vc
     }
 }
