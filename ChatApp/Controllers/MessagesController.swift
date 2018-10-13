@@ -24,11 +24,9 @@ class MessagesController: UITableViewController
         tableView.register(UserCell.self, forCellReuseIdentifier: chatID)
         tableView.allowsMultipleSelectionDuringEditing = true
     }
-    /*
     override func viewWillAppear(_ animated: Bool) {
          userStats()
     }
-    */
     
     var messages = [MessageModel]() // an empty Array of messages
     var messagesDict = [String: MessageModel]()
