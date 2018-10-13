@@ -24,7 +24,7 @@ class MessagesController: UITableViewController
         tableView.register(UserCell.self, forCellReuseIdentifier: chatID)
         tableView.allowsMultipleSelectionDuringEditing = true
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool){
          userStats()
     }
     
